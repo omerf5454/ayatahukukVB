@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Ayata Hukuk & Arabuluculuk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="brand">
+            <img src="logo.png" alt="Ayata Hukuk Logo" class="nav-logo">
+            <span>AYATA HUKUK</span>
+        </a>
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+            <a href="calisma-alanlari.html">Çalışma Alanları</a>
+            <a href="ekibimiz.html">Avukatlarımız</a>
+            <a href="iletisim.html" class="active">İletişim</a>
+        </nav>
+    </header>
+
+    <section class="container">
+        <h2>İletişim & Randevu</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info card">
+                <h3>Büro İletişim Bilgileri</h3>
+                <p><strong>📞 Telefon:</strong> <a href="tel:+902642719741" class="contact-link">0 (264) 271 97 41</a></p>
+                <p><strong>✉️ E-Posta:</strong> avomerayata@hotmail.com</p>
+                <p><strong>📍 Adres:</strong> Cumhuriyet Mah. Bahçıvan Sok. No:103/A K:1 D:11, Adapazarı / Sakarya</p>
+                <p><strong>⏰ Çalışma Saatleri:</strong> Pazartesi - Cuma: 09:00 - 18:00</p>
+            </div>
+
+            <div class="contact-form card">
+                <h3>Hukuki Danışma Formu</h3>
+                <form onsubmit="whatsappYonlendir(event)">
+                    <input type="text" id="adSoyad" placeholder="Adınız Soyadınız" required>
+                    <input type="tel" id="telefonNo" placeholder="Telefon Numaranız" required>
+                    <textarea id="konuMesaj" rows="4" placeholder="Hukuki konunuzu kısaca özetleyiniz..." required></textarea>
+                    
+                    <button type="submit" class="btn" style="width: 100%; background: linear-gradient(135deg, #25D366, #128C7E); color: #fff;">
+                        💬 WhatsApp Üzerinden İletişime Geç
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="fee-banner">
+            <h3>⚖️ Randevu ve Danışma Ücreti Bilgilendirmesi</h3>
+            <p>Yüz yüze veya online gerçekleştirilen hukuki danışmanlık görüşmeleri, 1136 sayılı Avukatlık Kanunu gereğince ücrete tabidir. Randevu oluştururken görüşme ücreti hakkında tarafınıza ön bilgilendirme yapılmaktadır.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ayata Hukuk & Arabuluculuk Bürosu. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script>
+        function whatsappYonlendir(e) {
+            e.preventDefault();
+            
+            var ad = document.getElementById("adSoyad").value;
+            var tel = document.getElementById("telefonNo").value;
+            var mesaj = document.getElementById("konuMesaj").value;
+            
+            // WhatsApp hattı numarası (Ekranda görünmez, arka planda buraya yönlendirir)
+            var wpNumara = "905075121197";
+            
+            var hazirMetin = "Merhaba Ayata Hukuk, web siteniz üzerinden ulaşıyorum.%0A%0A" +
+                             "*Ad Soyad:* " + encodeURIComponent(ad) + "%0A" +
+                             "*Telefon:* " + encodeURIComponent(tel) + "%0A" +
+                             "*Hukuki Konu:* " + encodeURIComponent(mesaj);
+            
+            var url = "https://wa.me" + wpNumara + "?text=" + hazirMetin;
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+</html>
+
+

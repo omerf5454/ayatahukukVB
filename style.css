@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #1e293b;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Üst Menü */
+header {
+    background-color: #071324;
+    color: #fff;
+    padding: 0.8rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #d4af37;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #e5c158;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-logo {
+    height: 42px;
+    width: 42px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1.5px solid #d4af37;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+}
+
+nav a {
+    color: #f8fafc;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: 0.3s;
+    font-size: 0.92rem;
+}
+
+nav a:hover, nav a.active {
+    background-color: #d4af37;
+    color: #071324;
+    font-weight: bold;
+}
+
+/* Karşılama Alanı (Hero) */
+.hero {
+    background: radial-gradient(circle at center, #0e2240 0%, #050d1a 100%);
+    color: #fff;
+    text-align: center;
+    padding: 45px 20px 65px;
+    border-bottom: 3px solid #d4af37;
+}
+
+.hero-logo {
+    width: 210px;
+    max-width: 75%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(212, 175, 55, 0.4);
+}
+
+.hero h1 {
+    font-size: 2rem;
+    color: #e5c158;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+/* Güvenilirlik Kutusu */
+.trust-box {
+    max-width: 820px;
+    margin: 0 auto 30px;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-left: 4px solid #d4af37;
+    padding: 22px 25px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.trust-box h3 {
+    color: #e5c158;
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+
+.trust-box p {
+    color: #e2e8f0;
+    font-size: 0.98rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #e5c158, #b88a28);
+    color: #071324;
+    padding: 12px 26px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #d4af37;
+    color: #e5c158;
+}
+
+.btn-outline:hover {
+    background: #d4af37;
+    color: #071324;
+}
+
+/* İçerik ve Kartlar */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #071324;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 65px;
+    height: 3px;
+    background-color: #d4af37;
+    margin: 10px auto 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px 22px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(7, 19, 36, 0.08);
+    border-top: 4px solid #d4af37;
+}
+
+.card h3 {
+    color: #071324;
+    margin-bottom: 10px;
+}
+
+/* Çalışma Alanları Detay Listesi */
+.detail-card p {
+    margin-bottom: 12px;
+    color: #334155;
+    font-size: 0.95rem;
+}
+
+.detail-card ul {
+    padding-left: 18px;
+    color: #475569;
+    font-size: 0.92rem;
+}
+
+.detail-card ul li {
+    margin-bottom: 6px;
+}
+
+/* Ekip Kartları ve Avukat Profil Fotoğrafları */
+.team-card {
+    text-align: center;
+}
+
+.lawyer-photo {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    border: 3px solid #d4af37;
+    box-shadow: 0 5px 15px rgba(7, 19, 36, 0.2);
+    margin: 0 auto 15px;
+    display: block;
+    background-color: #071324;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #071324;
+    color: #e5c158;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.role {
+    color: #b88a28;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* Ücret Bilgilendirme Kutusu (Her Sayfanın Altında) */
+.fee-banner {
+    margin-top: 40px;
+    background-color: #071324;
+    color: #f8fafc;
+    padding: 25px 28px;
+    border-radius: 8px;
+    border-left: 5px solid #d4af37;
+    box-shadow: 0 6px 20px rgba(7, 19, 36, 0.12);
+}
+
+.fee-banner h3 {
+    color: #e5c158;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.fee-banner p {
+    color: #cbd5e1;
+    font-size: 0.96rem;
+    line-height: 1.65;
+}
+
+.fee-banner strong {
+    color: #e5c158;
+}
+
+/* İletişim Alanı */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 25px;
+}
+
+.contact-info p {
+    margin-bottom: 16px;
+    font-size: 1rem;
+    word-break: break-word;
+}
+
+.contact-link {
+    color: #0e2240;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px dashed #d4af37;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #d4af37;
+}
+
+/* Alt Bilgi */
+footer {
+    background-color: #071324;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 2px solid #d4af37;
+    font-size: 0.9rem;
+}
+
+/* TELEFON VE TABLET EKRAN UYUMU */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 12px 15px;
+        gap: 12px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    nav a {
+        padding: 7px 10px;
+        font-size: 0.85rem;
+        background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .hero {
+        padding: 35px 15px 45px;
+    }
+
+    .hero h1 {
+        font-size: 1.45rem;
+    }
+
+    .trust-box {
+        padding: 18px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .grid, .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+
